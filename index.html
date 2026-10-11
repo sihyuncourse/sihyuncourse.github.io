@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sihyun Lee</title>
+<meta name="description" content="Sihyun Lee — college counselor at Newton Academy and Ph.D. student (on leave) in cryptography at NYU.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23b4532a'/><text x='16' y='22.5' font-family='Georgia,serif' font-size='18' fill='white' text-anchor='middle'>SL</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1d1c1a;
+    --muted: #6b6760;
+    --rule: #e4e0d8;
+    --accent: #b4532a;
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161514;
+      --text: #ebe8e2;
+      --muted: #9a958c;
+      --rule: #2e2c29;
+      --accent: #e08a5f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161514; --text: #ebe8e2; --muted: #9a958c; --rule: #2e2c29; --accent: #e08a5f;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 1.125rem/1.6 var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 4.5rem 1rem 3rem; }
+
+  a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: text-decoration-color .15s, color .15s; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+  header h1 { font-weight: 500; font-size: 2.5rem; line-height: 1.1; margin: 0 0 .35rem; letter-spacing: -0.01em; }
+  header .tagline { font-family: var(--sans); font-size: .9rem; color: var(--muted); margin: 0; }
+  nav { margin-top: 1.25rem; display: flex; gap: 1.25rem; flex-wrap: wrap; font-family: var(--sans); font-size: .85rem; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  section { margin-top: 3.5rem; }
+  h2 {
+    font-family: var(--sans); font-weight: 500; font-size: .75rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--rule);
+  }
+  h3 { font-family: var(--sans); font-weight: 500; font-size: .95rem; margin: 2rem 0 .5rem; }
+  p { margin: 0 0 1rem; }
+
+  .entries { list-style: none; margin: 0; padding: 0; }
+  .entry { display: grid; grid-template-columns: 1fr auto; gap: 0 1rem; padding: .75rem 0; }
+  .entry + .entry { border-top: 1px dashed var(--rule); }
+  .entry .what { font-weight: 500; }
+  .entry .role { font-style: italic; }
+  .entry .when { font-family: var(--sans); font-size: .8rem; color: var(--muted); white-space: nowrap; padding-top: .3rem; text-align: right; }
+  .entry .note { grid-column: 1 / -1; color: var(--muted); font-size: 1rem; }
+
+  .courses { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .15rem 1.5rem; list-style: none; padding: 0; margin: 0 0 1rem; font-size: 1rem; }
+  .courses li { display: flex; gap: .6rem; }
+  .courses .num { font-family: var(--sans); font-size: .75rem; color: var(--muted); min-width: 2.6rem; padding-top: .25rem; }
+  .courses .term { color: var(--muted); }
+
+  footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: .8rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+  @media (max-width: 520px) {
+    main { padding-top: 3rem; }
+    header h1 { font-size: 2rem; }
+    .entry { grid-template-columns: 1fr; }
+    .entry .when { text-align: left; padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Sihyun Lee</h1>
+    <p class="tagline">College counselor · Cryptography Ph.D. student (on leave), NYU</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching &amp; Counseling</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am the college counselor at <a href="https://newtonacademy.kr/">Newton Academy</a>. Previously, I worked part-time writing admissions essays and placed my students into top undergraduate programs, including Harvard, Yale, Princeton, Stanford, and MIT.</p>
+    <p>I am technically a Ph.D. student on leave at New York University, studying cryptography. I received my B.S. and M.S. degrees from Columbia University. I was also an AI developer for <a href="https://www.bigcare.co.kr">BigCare</a> and <a href="https://en.cjolivenetworks.co.kr">CJ OliveNetworks</a>, a biology teacher at <a href="https://www.bugil.hs.kr/jsp/index/index.jsp">Bugil Academy</a>, and a translator for the <a href="https://www.2id.korea.army.mil">U.S. 2nd Infantry Division</a>.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="entries">
+      <li class="entry"><span class="what">New York University <span class="role">— Ph.D., Computer Science</span></span><span class="when">2022 – present</span></li>
+      <li class="entry"><span class="what">Duke University <span class="role">— Ph.D., Computer Science</span></span><span class="when">2021 – 2022</span></li>
+      <li class="entry"><span class="what">Columbia University <span class="role">— M.S., Computer Science</span></span><span class="when">2019 – 2020</span>
+        <span class="note">GPA 4.03 / 4.33. Full-ride TA Fellow for both semesters.</span></li>
+      <li class="entry"><span class="what">Columbia University <span class="role">— B.S., Computer Science</span></span><span class="when">2014 – 2019</span>
+        <span class="note">GPA 4.18 / 4.33. Graduated <em>summa cum laude</em> in six semesters of study.</span></li>
+      <li class="entry"><span class="what">Bugil Academy <span class="role">— Global Leader Program</span></span><span class="when">2011 – 2014</span>
+        <span class="note">GPA 4.12 / 4.30.</span></li>
+      <li class="entry"><span class="what">CheongShim International Academy</span><span class="when">2008 – 2011</span></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="entries">
+      <li class="entry"><span class="what">Newton Academy <span class="role">— college counselor</span></span><span class="when">present</span></li>
+      <li class="entry"><span class="what">BigCare <span class="role">— AI developer</span></span><span class="when">Jan – Jun 2021 · Seoul</span>
+        <span class="note">Built food-recommendation and sentiment-analysis systems personalized using electronic health records.</span></li>
+      <li class="entry"><span class="what">Bugil Academy <span class="role">— biology instructor</span></span><span class="when">Sep – Dec 2020 · Cheonan</span>
+        <span class="note">Taught AP Biology and Anatomy &amp; Physiology; designed challenging courses for gifted science students.</span></li>
+      <li class="entry"><span class="what">CJ OliveNetworks <span class="role">— research intern</span></span><span class="when">Jun – Aug 2018 · Seoul</span>
+        <span class="note">Developed probability models and motion-detection frameworks to autocorrect errors in celebrity detection.</span></li>
+      <li class="entry"><span class="what">Bain &amp; Company <span class="role">— research assistant</span></span><span class="when">Mar – May 2017 · Seoul</span>
+        <span class="note">Worked on two projects: one with a nationwide retail company, and a due-diligence project.</span></li>
+      <li class="entry"><span class="what">U.S. 2nd Infantry Division <span class="role">— translator</span></span><span class="when">Jun 2015 – Mar 2017 · Dongducheon</span>
+        <span class="note">Military service as KATUSA.</span></li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching &amp; Counseling</h2>
+
+    <h3>College courses</h3>
+    <p>Teaching assistant for the following computer science courses at Columbia, Duke, and NYU:</p>
+    <ul class="courses">
+      <li><span class="num">1170</span><span>Fundamental Algorithms <span class="term">(F23, S24, F24)</span></span></li>
+      <li><span class="num">230</span><span>Discrete Math <span class="term">(S22)</span></span></li>
+      <li><span class="num">330</span><span>Algorithms <span class="term">(F21)</span></span></li>
+      <li><span class="num">3261</span><span>CS Theory <span class="term">(S18)</span></span></li>
+      <li><span class="num">4231</span><span>Algorithms <span class="term">(S19)</span></span></li>
+      <li><span class="num">4232</span><span>Advanced Algorithms <span class="term">(S20)</span></span></li>
+      <li><span class="num">4236</span><span>Complexity <span class="term">(F19)</span></span></li>
+      <li><span class="num">4261</span><span>Cryptography <span class="term">(Su19)</span></span></li>
+      <li><span class="num">4771</span><span>Machine Learning <span class="term">(F18, S19, Su19, Su20)</span></span></li>
+      <li><span class="num">4774</span><span>Unsupervised Learning <span class="term">(Su20)</span></span></li>
+      <li><span class="num">4995</span><span>Learning Theory <span class="term">(S20)</span></span></li>
+    </ul>
+
+    <h3>High school courses</h3>
+    <p>I’ve tutored math and science since 2011, when I was selected as a peer tutor in high school. I have taught AP Physics (all), Chemistry, Biology, Calculus, Statistics, Computer Science, Economics (both), and English Language.</p>
+
+    <h3>Graduate admissions</h3>
+    <p>I have also helped applicants write research statements for Ph.D. admissions, placing clients into top U.S. programs including the computer science programs at Stanford, UC Berkeley, MIT, and Carnegie Mellon.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Sihyun Lee</span>
+    <span>leesihyun.com</span>
+  </footer>
+</main>
+</body>
+</html>
